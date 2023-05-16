@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace Lab.EF.Logic
 {
-
     public abstract class BaseLogic
     {
-        protected readonly NorthwindContext _nortwindContext;
+        protected readonly NorthwindContext context;
         public BaseLogic()
         {
-            _nortwindContext = new NorthwindContext();
+            context = new NorthwindContext();
         }
     }
 }
