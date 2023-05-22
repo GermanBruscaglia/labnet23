@@ -1,0 +1,27 @@
+﻿@model Lab.MVC.Models.CategoriesModel
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insertar Categoria Nueva</h2>
+
+@using (Html.BeginForm("Insert", "Categories", FormMethod.Post))
+{
+    <label>Nombre categoria nueva: </label>
+    @Html.TextBoxFor(c => c.Name)
+    <label>Descripcion categoria nueva: </label>
+    @Html.TextBoxFor(c => c.Descripcion)
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}
+
+<h2>Modificar Categoria</h2>
+@using (Html.BeginForm("Update", "Categories"))
+{
+    <label>ID Categoria: </label>
+    @Html.TextBoxFor(c => c.Id)
+    <label>Nombre Categoria nueva: </label>
+    @Html.TextBoxFor(c => c.Name)
+    <label>Descripcion Categoria nueva: </label>
+    @Html.TextBoxFor(c => c.Descripcion)
+    <input type="submit" class="btn btn-success" value="Modificar" />
+}

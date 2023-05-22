@@ -1,0 +1,30 @@
+﻿@model List<Lab.MVC.Models.CategoriesModel>
+@{
+    ViewBag.Title = "Categories";
+}
+
+    <h1>Lista de Categorias</h1>
+
+    <table class="table table-dark table-striped">
+        <tr>
+            <td>Id Categoria</td>
+            <td>Nombre Categoria </td>
+            <td>Descripcion Categoria</td>
+            <td>Eliminar</td>
+        </tr>
+
+        @foreach (var categorie in Model)
+        {
+            <tr>
+                <td>@categorie.Id</td>
+                <td>@categorie.Name</td>
+                <td>@categorie.Descripcion</td>
+                <td>@Html.ActionLink("Borrar", "Delete", new { Id = categorie.Id },new {@class = "text-decoration-none text-light btn btn-warning" })</td>
+            </tr>
+        }
+
+    </table>
+
+    <div class="btn btn-secondary text-light">
+        @Html.ActionLink("Insertar nueva Categoria", "Insert", "Categories", new { @class = "text-decoration-none text-light" })
+    </div>
