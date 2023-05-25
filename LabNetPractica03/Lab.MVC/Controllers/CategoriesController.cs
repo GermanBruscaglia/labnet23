@@ -38,7 +38,7 @@ namespace Lab.MVC.Controllers
         {
             try
             {
-                var categorieEntity = new Categories { CategoryName = categorietModel.Name, Description = categorietModel.Descripcion };
+                Categories categorieEntity = new Categories { CategoryName = categorietModel.Name, Description = categorietModel.Descripcion };
                 Logic.Add(categorieEntity);
 
                 return RedirectToAction("Index");

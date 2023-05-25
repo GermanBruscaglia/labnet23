@@ -15,7 +15,8 @@ namespace Lab.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Probando Mensajes";
+            ViewData["Mensaje2"] = "ESte es un mensaje de ViewData";
 
             return View();
         }

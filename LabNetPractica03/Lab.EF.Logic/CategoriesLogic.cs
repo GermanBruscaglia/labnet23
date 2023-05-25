@@ -29,6 +29,11 @@ namespace Lab.EF.Logic
             return context.Categories.ToList();
         }
 
+        public Categories GetByID(int id)
+        {
+            return context.Categories.Find(id);
+        }
+
         public void Update(Categories update)
         {
             Categories categoriaUpdate = context.Categories.Find(update.CategoryID);
